@@ -1,0 +1,97 @@
+/* ===== Global ===== */
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  /* Purple background (Narwhalkid-inspired but softer) */
+  background: radial-gradient(
+    circle at top,
+    #3b1b5a 0%,
+    #1a0f2e 45%,
+    #0b0812 100%
+  );
+
+  color: white;
+}
+
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 30px 20px 20px;
+}
+
+header h1 {
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+#search {
+  width: min(420px, 90%);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* ===== Games List ===== */
+#games-list {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===== Game Card ===== */
+.game-card {
+  background: rgba(25, 25, 28, 0.95);
+  border-radius: 14px;
+  padding: 18px 22px;
+
+  /* soft purple glow */
+  box-shadow:
+    0 0 0 1px rgba(155, 92, 255, 0.15),
+    0 10px 30px rgba(0, 0, 0, 0.5);
+
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+
+  /* stronger but still soft glow */
+  box-shadow:
+    0 0 0 1px rgba(155, 92, 255, 0.35),
+    0 0 25px rgba(155, 92, 255, 0.25),
+    0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Links ===== */
+.game-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* ===== Text ===== */
+.game-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.game-url {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
